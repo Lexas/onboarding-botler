@@ -14,10 +14,10 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.route('/addToRepo')
 	.get(function(req, res){
-		exec('echo hello', function(err, stdout, stderr){
+		exec('casperjs bots/addToGithub.js --remote-debugger-port=9000 ', function(err, stdout, stderr){
 			console.log('stdout: %s', stdout);	
 		});
-		res.send('yay');
+		res.send('<iframe src="https://localhost:9000"></iframe>');
 	})
 
 app.listen(3000)
