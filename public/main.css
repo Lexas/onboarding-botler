@@ -8,6 +8,10 @@ body {
 form {
     width: 60%;
     margin: 0 auto;
+    margin-top: 30px;
+    border: 2px solid orange;
+    border-radius: 25px;
+    padding: 15px 15px 60px;
 }
 
 ul {
@@ -17,11 +21,15 @@ ul {
 
 li {
     list-style: none;
-    margin: 5px;
+    margin: 25px 0;
 }
 
 input[type="text"] {
     width: 400px;
+    float: right;
+}
+
+.radio_container {
     float: right;
 }
 
@@ -52,4 +60,10 @@ label, input[type="text"] {
     padding: 10px;
     border: 2px outset white;
     float: right;
+    margin-top: 10px;
+}
+
+#run:hover {
+    background-color: black;
+    color: white;
 }
