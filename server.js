@@ -13,11 +13,13 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
 app.route('/addToRepo')
-	.get(function(req, res){
-		exec('casperjs bots/addToGithub.js --remote-debugger-port=9000 ', function(err, stdout, stderr){
+	.post(function(req, res){
+		var user = req.body.githubUser;
+		exec('casperjs bots/addToGithub.js '+ user, function(err, stdout, stderr){
 			console.log('stdout: %s', stdout);	
 		});
-		res.send('<iframe src="https://localhost:9000"></iframe>');
+//		res.send('<iframe src="https://localhost:9000"></iframe>');
+		res.redirect('/');
 	})
 
 app.listen(3000)

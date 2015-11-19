@@ -11,7 +11,7 @@
             Onboarding Botler
             <img id='logo' src='http://41.media.tumblr.com/9755bdfc498878946d215c5cc5a138c0/tumblr_nv04b67zLN1rfoa6ko1_1280.png'/>
         </div>
-        <form>
+        <form action="/addToRepo" method="POST">
             <ul>
                 <li><label>First Name</label><input type='text' id='fname' /></li>
                 <li><label>Last Name</label><input type='text' id='lname' /></li>
@@ -22,7 +22,7 @@
                         <label><input type='radio' name='github' class='github' value='false' /> No</label>
                     </span>
                 </li>
-                <li id='github_line'><label id='github_account_text'></label><input type='text' id='github_user' /></li>
+                <li id='github_line'><label id='github_account_text'></label><input type='text' id='github_user' name='githubUser' /></li>
                 <li><label>Do you have a Pre-existing Slack account?</label>
                     <span class='radio_container'>
                         <label><input type='radio' name='slack' class='slack' value='true' /> Yes</label>
